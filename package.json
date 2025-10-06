@@ -1,0 +1,32 @@
+{
+  "name": "hidramflex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamuelFDEZS/Hidramflex.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamuelFDEZS/Hidramflex/issues"
+  },
+  "homepage": "https://github.com/SamuelFDEZS/Hidramflex#readme",
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.6.0",
+    "standard": "^17.1.2"
+  },
+  "extends": [
+    "standard",
+    "standard-jsx"
+  ]
+}
