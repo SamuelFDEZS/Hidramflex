@@ -3,3 +3,10 @@
 @use "./variables";
 @use "./mixin";
 @use "./fonts";
+@use "./body";
+
+// Common
+@use "../common/header";
+
+// Pages
+@use "../pages/home"

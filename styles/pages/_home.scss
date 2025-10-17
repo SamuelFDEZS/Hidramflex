@@ -1,0 +1,35 @@
+.carrusel {
+    width: 100%;
+    height: 90vh;
+    border: 3px solid black;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    margin-top: 8vh;
+    position: relative;
+
+    &__img {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+
+        &--1 {
+            background-image: url("https://images.unsplash.com/photo-1531512073830-ba890ca4eba2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9uZG8lMjBob3Jpem9udGFsfGVufDB8fDB8fHww&fm=jpg&q=60&w=3000");
+        }
+
+        &--2 {
+            background-image: url("https://img.freepik.com/foto-gratis/vista-formacion-natural-montana-estetica-ensueno_23-2151700235.jpg");
+        }
+
+        &--3 {
+            background-image: url("https://img.freepik.com/fotos-premium/paisaje-montanas-vista-al-lago_849906-18188.jpg?semt=ais_hybrid&w=740&q=80");
+        }
+
+        &--4 {
+            background-image: url("https://img.freepik.com/fotos-premium/espectacular-atardecer-sobre-sereno-paisaje-montanoso_1138224-9828.jpg?semt=ais_hybrid&w=740&q=80");
+        }
+    }
+}

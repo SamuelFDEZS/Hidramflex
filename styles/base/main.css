@@ -176,4 +176,110 @@ table {
 @font-face {
   font-family: "Poppins-Light";
   src: url("../../assets/fonts/Poppins-Light.ttf");
+}
+body {
+  font-family: "Titilium-Regular", sans-serif;
+  background-color: #F5F5F5;
+  overflow-x: hidden;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  height: 8vh;
+  top: 0;
+  display: flex;
+  align-items: center;
+  background-color: #1565c0;
+  color: #ffffff;
+  gap: 2%;
+  z-index: 10;
+  transform: translate(0, -100%);
+  transition: 0.3s;
+}
+.header.visible {
+  transform: translate(0, 0);
+}
+.header__logo {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 12%;
+}
+.header__logo__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.header__logo__link__image {
+  border-radius: 10px;
+  width: 50%;
+  height: 90%;
+  cursor: pointer;
+  filter: invert(1);
+}
+.header__menu {
+  width: 40%;
+  height: 100%;
+  display: flex;
+}
+.header__menu__list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+.header__menu__list__item {
+  width: 12%;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.05rem;
+}
+.header__menu__list__item__link {
+  font-family: "Titilium-SemiBold", sans-serif;
+  text-decoration: none;
+  color: #ffffff;
+  transition: 0.3s ease;
+}
+.header__menu__list__item__link:hover {
+  color: #29b6f6;
+}
+
+.carrusel {
+  width: 100%;
+  height: 90vh;
+  border: 3px solid black;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  margin-top: 8vh;
+  position: relative;
+}
+.carrusel__img {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.carrusel__img--1 {
+  background-image: url("https://images.unsplash.com/photo-1531512073830-ba890ca4eba2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9uZG8lMjBob3Jpem9udGFsfGVufDB8fDB8fHww&fm=jpg&q=60&w=3000");
+}
+.carrusel__img--2 {
+  background-image: url("https://img.freepik.com/foto-gratis/vista-formacion-natural-montana-estetica-ensueno_23-2151700235.jpg");
+}
+.carrusel__img--3 {
+  background-image: url("https://img.freepik.com/fotos-premium/paisaje-montanas-vista-al-lago_849906-18188.jpg?semt=ais_hybrid&w=740&q=80");
+}
+.carrusel__img--4 {
+  background-image: url("https://img.freepik.com/fotos-premium/espectacular-atardecer-sobre-sereno-paisaje-montanoso_1138224-9828.jpg?semt=ais_hybrid&w=740&q=80");
 }/*# sourceMappingURL=main.css.map */
