@@ -3,3 +3,8 @@ body{
     background-color: #F5F5F5;
     overflow-x: hidden;
 }
+
+::selection{
+    background-color: #29B6F6;
+    color: #ffffff;
+}
