@@ -21,7 +21,7 @@
                 </li>
                 <li class="header__menu__list__item"><a href="#servicios"
                         class="header__menu__list__item__link">Servicios</a></li>
-                <li class="header__menu__list__item"><a href="#servicios" class="header__menu__list__item__link">Sobre
+                <li class="header__menu__list__item"><a href="#aboutus" class="header__menu__list__item__link">Sobre
                         nosotros</a></li>
                 <li class="header__menu__list__item"><a href="#tienda" class="header__menu__list__item__link">Tienda</a>
                 </li>
@@ -32,24 +32,49 @@
             </ul>
         </nav>
     </header>
-
+    
     <main class="carrusel">
-        <div class="carrusel__left-button"></div>
-
+        <div class="carrusel__left-button"><span class="fa-solid fa-angle-left"></span></div>
+        
         <article class="carrusel__img carrusel__img--1">
-            <div class="carrusel__img__text">Reparaciones hidráulicas en Madrid</div>
+            <div class="carrusel__img__text-container">
+                <h2 class="carrusel__img__text-container__title">Reparaciones hidráulicas en Madrid</h2>
+            </div>
         </article>
         <article class="carrusel__img carrusel__img--2">
-            <div class="carrusel__img__text">Taller hidráulico</div>
+            <div class="carrusel__img__text-container">
+                <h2 class="carrusel__img__text-container__title">Fabricación y reparación</h2>
+
+                <a href="#" class="carrusel__img__text-container__link">
+                    <button class="carrusel__img__text-container__link__button">Contacto</button>
+                </a>
+            </div>
         </article>
         <article class="carrusel__img carrusel__img--3">
-            <div class="carrusel__img__text">Visite nuestra tienda</div>
+            <div class="carrusel__img__text-container">
+                <h2 class="carrusel__img__text-container__title">Taller hidráulico</h2>
+            </div>
         </article>
         <article class="carrusel__img carrusel__img--4">
-            <div class="carrusel__img__text">Fabricación y Reparación</div>
+            <div class="carrusel__img__text-container">
+                <h2 class="carrusel__img__text-container__title">Visite nuestra tienda</h2>
+
+                <a href="#" class="carrusel__img__text-container__link">
+                    <button class="carrusel__img__text-container__link__button">Tienda</button>
+                </a>
+            </div>
+        </article>
+        <article class="carrusel__img carrusel__img--5">
+            <div class="carrusel__img__text-container">
+                <h2 class="carrusel__img__text-container__title">¡No olvides pasarte por nuestro blog!</h2>
+
+                <a href="#" class="carrusel__img__text-container__link">
+                    <button class="carrusel__img__text-container__link__button">Blog</button>
+                </a>
+            </div>
         </article>
 
-        <div class="carrusel__right-button"></div>
+        <div class="carrusel__right-button"><span class="fa-solid fa-angle-right"></span></div>
     </main>
 
     <section class="expectations">
@@ -143,8 +168,8 @@
         <main class="light-services__container">
 
             <article class="light-services__container__card">
-                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 512 512" viewBox="0 0 512 512"
-                    id="Hose">
+                <svg class="light-services__container__card__icon" xmlns="http://www.w3.org/2000/svg"
+                    enable-background="new 0 0 512 512" viewBox="0 0 512 512" id="Hose">
                     <path d="M260.771,408.799c-105.799,0-191.872-86.072-191.872-191.869c0-105.798,86.073-191.871,191.872-191.871
 			c105.796,0,191.867,86.073,191.867,191.871C452.638,322.727,366.566,408.799,260.771,408.799z M260.771,41.059
 			c-96.976,0-175.872,78.896-175.872,175.871c0,96.975,78.896,175.869,175.872,175.869c96.974,0,175.867-78.895,175.867-175.869
@@ -168,9 +193,18 @@
 			C112.049,484.056,108.689,486.941,104.737,486.941z M92.706,470.941h5.16l6.493-42.527H86.213L92.706,470.941z"
                         fill="#00c0ff" class="color000000 svgShape"></path>
                 </svg>
+
+                <h3 class="light-services__container__card__title">
+                    Fabricación y reparación de latiguillos hidráulicos
+                </h3>
+                <p class="light-services__container__card__text">
+                    Fabricamos y reparamos latiguillos a medida con materiales de alta resistencia, garantizando un
+                    sellado perfecto y máxima durabilidad.
+                </p>
             </article>
             <article class="light-services__container__card">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="HydraulicJack">
+                <svg class="light-services__container__card__icon" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 64 64" id="HydraulicJack">
                     <g fill="#00c0ff" class="color000000 svgShape">
                         <path
                             d="M8 62a6 6 0 0 1 0-12 5.847 5.847 0 0 1 2.014.35A5.998 5.998 0 0 1 8 62zm0-10a4.008 4.008 0 1 0 1.34.233A3.924 3.924 0 0 0 8 52zm47 10a6 6 0 1 1 6-6 6.007 6.007 0 0 1-6 6zm0-10a4 4 0 1 0 4 4 4.004 4.004 0 0 0-4-4z"
@@ -189,9 +223,19 @@
                         <circle cx="51" cy="44" r="1" fill="#00c0ff" class="color000000 svgShape"></circle>
                     </g>
                 </svg>
+
+                <h3 class="light-services__container__card__title">
+                    Mantenimiento de sistemas hidráulicos
+                </h3>
+                <p class="light-services__container__card__text">
+                    Revisamos y ajustamos bombas, cilindros y válvulas para mantener tus equipos en óptimo rendimiento y
+                    prevenir averías.
+                </p>
+
             </article>
             <article class="light-services__container__card">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="Truck">
+                <svg class="light-services__container__card__icon" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 32 32" id="Truck">
                     <path fill-rule="evenodd"
                         d="M.5 1026.362a.5.5 0 0 0-.5.5v16a.5.5 0 0 0 .5.5h4.58c-.023.16-.05.322-.05.488 0 1.928 1.572 3.5 3.5 3.5 1.926 0 3.5-1.572 3.5-3.5 0-.166-.029-.327-.051-.488H20.5a.5.5 0 0 0 .1-.012h.98c-.024.165-.05.33-.05.5 0 1.927 1.572 3.5 3.5 3.5 1.926 0 3.5-1.573 3.5-3.5 0-.17-.028-.335-.051-.5H31.5a.5.5 0 0 0 .5-.5v-2.963a.5.5 0 0 0 .002-.035v-2.006a.5.5 0 0 0-.002-.05v-2.947a.5.5 0 0 0-.123-.33.5.5 0 0 0-.063-.078l-5.181-5.92a.5.5 0 0 0-.377-.17H21v-1.489a.5.5 0 0 0-.5-.5H.5zm.5 1h19v10.988H1v-10.988zm2.021.988a.5.5 0 0 0-.492.506v7.994a.5.5 0 1 0 1 0v-7.994a.5.5 0 0 0-.508-.506zm3 0a.5.5 0 0 0-.492.506v7.994a.5.5 0 1 0 1 0v-7.994a.5.5 0 0 0-.508-.506zm3 0a.5.5 0 0 0-.492.506v7.994a.5.5 0 1 0 1 0v-7.994a.5.5 0 0 0-.508-.506zm3 0a.5.5 0 0 0-.492.506v7.994a.5.5 0 1 0 1 0v-7.994a.5.5 0 0 0-.508-.506zm3 0a.5.5 0 0 0-.492.506v7.994a.5.5 0 1 0 1 0v-7.994a.5.5 0 0 0-.508-.506zm3 0a.5.5 0 0 0-.492.506v7.994a.5.5 0 1 0 1 0v-7.994a.5.5 0 0 0-.508-.506zm2.979 1h5.03l4.376 4.999H21v-4.998zm.03 5.999H31v1.998h-1.473a.5.5 0 0 0-.5.5v2.005a.5.5 0 0 0 .5.5H31v1.998h-2.822a3.498 3.498 0 0 0-3.149-2 3.498 3.498 0 0 0-3.148 2h-.852v-7.001zm1.44 1.502a.5.5 0 1 0 .051 1h1.016a.5.5 0 1 0 0-1h-1.016a.5.5 0 0 0-.05 0zm7.557 1.496H31v1.005h-.973v-1.005zM1 1039.35h19v3.011h-8.314a3.5 3.5 0 0 0-3.157-2.012 3.5 3.5 0 0 0-3.156 2.012H1v-1.012h1.521a.5.5 0 1 0 0-1H1v-1zm7.53 2c1.386 0 2.5 1.113 2.5 2.5 0 1.386-1.114 2.5-2.5 2.5a2.492 2.492 0 0 1-2.5-2.5c0-1.387 1.113-2.5 2.5-2.5zm16.5 0c1.386 0 2.5 1.113 2.5 2.5 0 1.386-1.114 2.5-2.5 2.5a2.492 2.492 0 0 1-2.5-2.5c0-1.387 1.113-2.5 2.5-2.5zm-16.5 1c-.823 0-1.5.677-1.5 1.5 0 .822.677 1.5 1.5 1.5.822 0 1.5-.678 1.5-1.5 0-.823-.678-1.5-1.5-1.5zm16.5 0c-.823 0-1.5.677-1.5 1.5 0 .822.677 1.5 1.5 1.5.822 0 1.5-.678 1.5-1.5 0-.823-.678-1.5-1.5-1.5zm-16.5 1c.281 0 .5.217.5.5 0 .282-.219.5-.5.5a.493.493 0 0 1-.5-.5c0-.283.217-.5.5-.5zm16.5 0c.281 0 .5.217.5.5 0 .282-.219.5-.5.5a.493.493 0 0 1-.5-.5c0-.283.217-.5.5-.5z"
                         color="#000" font-family="sans-serif" font-weight="400" overflow="visible"
@@ -199,9 +243,18 @@
                         transform="translate(0 -1020.362)" fill="#00c0ff" class="color000000 svgShape"></path>
                 </svg>
 
+                <h3 class="light-services__container__card__title">
+                    Venta de recambios y componentes
+                </h3>
+                <p class="light-services__container__card__text">
+                    Ofrecemos recambios hidráulicos y neumáticos de primeras marcas, con calidad garantizada y total
+                    compatibilidad.
+                </p>
+
             </article>
             <article class="light-services__container__card">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="mechanic">
+                <svg class="light-services__container__card__icon" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 32 32" id="mechanic">
                     <path fill="#00c0ff"
                         d="M13 17a1 1 0 0 1-.71-.29l-3.07-3.08a7 7 0 0 1-8.6-9.51 1 1 0 0 1 1.62-.3L4.41 6H6V4.41L3.82 2.24a1 1 0 0 1 .3-1.62 7 7 0 0 1 9.51 8.6l3.08 3.07a1 1 0 0 1-1.42 1.42l-3.54-3.54a1 1 0 0 1-.2-1.17 5 5 0 0 0-5.11-7l1.27 1.29C8.1 3.68 8 3.81 8 7a1 1 0 0 1-1 1c-3.26 0-3.32.09-3.71-.29L2 6.44a5 5 0 0 0 7 5.11 1 1 0 0 1 1.13.2l3.54 3.54A1 1 0 0 1 13 17zm5.37 5.78-3.08-3.07a1 1 0 0 1 1.42-1.42l3.54 3.54a1 1 0 0 1 .2 1.13 5 5 0 0 0 5.11 7l-1.27-1.26c-.39-.38-.29-.51-.29-3.7a1 1 0 0 1 1-1c3.26 0 3.32-.09 3.71.29L30 25.56a5 5 0 0 0-7-5.11 1 1 0 0 1-1.13-.2l-3.54-3.54a1 1 0 0 1 1.42-1.42l3.07 3.08a7 7 0 0 1 8.6 9.51 1 1 0 0 1-1.62.3L27.59 26H26v1.59l2.18 2.17a1 1 0 0 1-.3 1.62 7 7 0 0 1-9.51-8.6z"
                         class="color9f85ec svgShape"></path>
@@ -209,48 +262,130 @@
                         d="M4.12 31.38a1 1 0 0 1-.3-1.62L6 27.59V26H4.41l-2.17 2.18a1 1 0 0 1-1.62-.3 7 7 0 0 1 8.6-9.51l9.61-9.61a1 1 0 0 1 1.41 1.41L10.17 20.24a1 1 0 0 1-1.12.21 5 5 0 0 0-7 5.11l1.26-1.27c.37-.39.5-.29 3.69-.29a1 1 0 0 1 1 1c0 3.26.09 3.32-.29 3.71L6.44 30a5 5 0 0 0 5.11-7 1 1 0 0 1 .21-1.12l10.07-10.12a1 1 0 0 1 1.17-.21 5 5 0 0 0 7-5.11l-1.29 1.27c-.39.39-.52.29-3.71.29a1 1 0 0 1-1-1c0-3.26-.09-3.32.29-3.71L25.56 2a5 5 0 0 0-5.28 3.3 1 1 0 0 1-1.88-.66 7 7 0 0 1 9.48-4 1 1 0 0 1 .3 1.62L26 4.41V6h1.59l2.17-2.18a1 1 0 0 1 1.62.3 7 7 0 0 1-8.6 9.51l-9.15 9.15a7 7 0 0 1-9.51 8.6Z"
                         class="color38004d svgShape"></path>
                 </svg>
+
+                <h3 class="light-services__container__card__title">
+                    Reparación mecánica general
+                </h3>
+                <p class="light-services__container__card__text">
+                    Realizamos reparaciones y mantenimiento en vehículos y maquinaria, con precisión, confianza y
+                    materiales de primera.
+                </p>
+
             </article>
         </main>
+        <a href="" class="light-services__container__link">
+            <button class="light-services__container__link__button">Ver todos los servicios</button>
+        </a>
     </section>
 
-    <section class="all-services-container">
-        <button class="all-services-container__button">Ver todos los servicios</button>
+
+    <section class="reviews">
+
+        <h1 class="reviews__title">
+            La satisfacción de nuestros clientes es nuestra mejor garantía
+        </h1>
+
+        <h3 class="reviews__subtitle">
+            Estas son algunas de las opiniones de quienes ya han confiado en nosotros.
+        </h3>
+        <div class="reviews__container">
+
+            <article class="reviews__container__review">
+                <h3 class="reviews__container__review__name">Joaquín Cano Santos</h3>
+
+
+                <p class="reviews__container__review__text">
+                    Buena tienda hidráulica, personal muy amable, y si algo no tienen te lo traen muy rápido
+                </p>
+
+                <div class="reviews__container__review__stars" style="display:flex;align-items:center;gap:6px;">
+                    <svg width="115" height="22" viewBox="0 0 115 22" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="18" font-size="20" fill="#fbbc04" letter-spacing="-1">★★★★★</text>
+                    </svg>
+                    <span style="color:#555;font-weight:500;">5,0 ★ en Google</span>
+                </div>
+            </article>
+
+            <article class="reviews__container__review">
+                <h3 class="reviews__container__review__name">Jennyfer Molina de Souza</h3>
+                <p class="reviews__container__review__text">
+                    Tienen un trato excepcional junto a una gran rapidez y eficacia en cada trabajo. Se nota el progreso
+                    diario y realmente son expertos en su trabajo. Los materiales que utilizan son resistentes y
+                    duraderos.
+                    Sin duda, merece totalmente la pena contratar sus servicios!!
+                </p>
+
+                <div class="reviews__container__review__stars" style="display:flex;align-items:center;gap:6px;">
+                    <svg width="115" height="22" viewBox="0 0 115 22" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="18" font-size="20" fill="#fbbc04" letter-spacing="-1">★★★★★</text>
+                    </svg>
+                    <span style="color:#555;font-weight:500;">5,0 ★ en Google</span>
+                </div>
+            </article>
+
+            <article class="reviews__container__review">
+                <h3 class="reviews__container__review__name">Eduardo Castillo</h3>
+                <p class="reviews__container__review__text">
+                    Muy buenos soy pocero y me han solventado el problema un sábado y muy buenos precios es lo mejor
+                </p>
+
+                <div class="reviews__container__review__stars" style="display:flex;align-items:center;gap:6px;">
+                    <svg width="115" height="22" viewBox="0 0 115 22" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="18" font-size="20" fill="#fbbc04" letter-spacing="-1">★★★★★</text>
+                    </svg>
+                    <span style="color:#555;font-weight:500;">5,0 ★ en Google</span>
+                </div>
+            </article>
+        </div>
     </section>
 
-    <section class="businesses">
-        <h1 class="businesses__title">Empresas con las que trabajamos</h1>
+    <section class="slider">
+        <h1 class="slider__title">Empresas con las que trabajamos</h1>
 
-        <div class="businesses__container">
-            <article class="businesses__container__item">
-                <img src="" alt="Business Logo">
+        <div class="slider__track">
+            <article class="slider__track__slide slider__track__slide--1">
+
             </article>
-            <article class="businesses__container__item">
-                <img src="" alt="Business Logo">
+            <article class="slider__track__slide slider__track__slide--2">
+
             </article>
-            <article class="businesses__container__item">
-                <img src="" alt="Business Logo">
+            <article class="slider__track__slide slider__track__slide--3">
+
             </article>
-            <article class="businesses__container__item">
-                <img src="" alt="Business Logo">
+            <article class="slider__track__slide slider__track__slide--4">
+
             </article>
-            <article class="businesses__container__item">
-                <img src="" alt="Business Logo">
+            <article class="slider__track__slide slider__track__slide--5">
+
             </article>
-            <article class="businesses__container__item">
-                <img src="" alt="Business Logo">
+            <article class="slider__track__slide slider__track__slide--6">
+
             </article>
-            <article class="businesses__container__item">
-                <img src="" alt="Business Logo">
+            <article class="slider__track__slide slider__track__slide--1">
+
             </article>
-            <article class="businesses__container__item">
-                <img src="" alt="Business Logo">
+            <article class="slider__track__slide slider__track__slide--2">
+
+            </article>
+            <article class="slider__track__slide slider__track__slide--3">
+
+            </article>
+            <article class="slider__track__slide slider__track__slide--4">
+
+            </article>
+            <article class="slider__track__slide slider__track__slide--5">
+
+            </article>
+            <article class="slider__track__slide slider__track__slide--6">
             </article>
         </div>
     </section>
 
     <section class="doubts">
         <h3 class="doubts__title">Si tienes dudas</h3>
-        <button class="doubts__button">Contáctanos</button>
+        <a href="" class="doubts__link">
+            <button class="doubts__link__button">Contáctanos</button>
+        </a>
     </section>
 
     <footer class="footer">
@@ -285,10 +420,11 @@
             </article>
         </div>
         <div class="copyright-container">
-            <span class="copyright-container__text"></span>
+            <span class="copyright-container__text">Copyright © 2025 Hidramflex</span>
         </div>
     </footer>
 
+    <script src="https://kit.fontawesome.com/6785b831dc.js" crossorigin="anonymous"></script>
     <script src="/logic/navbar.js"></script>
 </body>
 

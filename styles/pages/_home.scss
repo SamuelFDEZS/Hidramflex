@@ -8,12 +8,75 @@
     margin-top: 8vh;
     position: relative;
 
+    &__left-button,
+    &__right-button {
+        flex: none;
+        width: 3%;
+        height: 7%;
+        position: sticky;
+        align-self: center;
+        color: white;
+        border: 3px solid white;
+        border-radius: 100%;
+        display: flex;
+        z-index: 3;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            scale: 1.1;
+        }
+    }
+
+    &__left-button {
+        left: 1%;
+        top: 50%;
+        margin-left: 1%;
+    }
+
+    &__right-button {
+        right: 1%;
+    }
+
+    &:hover .carrusel__right-button,
+    &:hover .carrusel__left-button {
+        opacity: 1;
+        visibility: visible;
+    }
+
     &__img {
         flex: 0 0 100%;
         scroll-snap-align: start;
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
+        position: relative;
+
+        &__text-container{
+            width: 30%;
+            height: 20%;
+            position: absolute;
+            bottom: 30%;
+            left: 15%;
+            color: #ffffff;
+            border: 3px solid white;
+            display: flex;
+            flex-direction: column;
+
+            &__title{
+                font-size: 3.5rem;
+                line-height: 130%;
+            }
+
+            &__link{
+
+            }
+        }
 
         &--1 {
             background-image: url("https://images.unsplash.com/photo-1531512073830-ba890ca4eba2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9uZG8lMjBob3Jpem9udGFsfGVufDB8fDB8fHww&fm=jpg&q=60&w=3000");
@@ -30,16 +93,19 @@
         &--4 {
             background-image: url("https://img.freepik.com/fotos-premium/espectacular-atardecer-sobre-sereno-paisaje-montanoso_1138224-9828.jpg?semt=ais_hybrid&w=740&q=80");
         }
+        &--5 {
+            background-image: url("https://images.unsplash.com/photo-1587387119725-9d6bac0f22fb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aG9yaXpvbnRhbHxlbnwwfHwwfHx8MA%3D%3D&fm=jpg&q=60&w=3000");
+        }
     }
 }
 
 .expectations {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8%;
+    gap: 3%;
     margin-top: 10vh;
 
     &__title {
@@ -51,13 +117,14 @@
     }
 
     &__description {
-        width: 50%;
+        width: 40%;
         text-align: center;
         line-height: 1.6;
         font-size: 1.1rem;
     }
 
     &__list {
+        margin-top: 3%;
         width: 100%;
         height: 80%;
         display: flex;
@@ -73,7 +140,7 @@
 
             &__card {
                 width: 100%;
-                height: 40%;
+                height: 50%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -148,9 +215,8 @@
                 width: 100%;
                 text-align: center;
                 line-height: 180%;
-                font-size: 0.9rem;
+                font-size: 1.1rem;
             }
-
         }
 
     }
@@ -203,7 +269,7 @@
 
 .light-services {
     width: 100%;
-    height: 120vh;
+    height: 75vh;
     margin-top: 18%;
     border: 3px solid black;
     background-image: url("/assets/images/logo-noinfo.jpeg");
@@ -215,7 +281,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 5%;
 
     &>* {
         position: relative;
@@ -239,27 +304,286 @@
         font-size: 1.8rem;
         word-spacing: 5px;
         color: #00ffff;
-        margin-top: 3%;
+        margin-top: 1%;
         font-family: "Poppins-Regular";
     }
 
     &__description {
-        width: 50%;
+        width: 40%;
         color: #ffffff;
         text-align: center;
         line-height: 150%;
+        font-size: 1.1rem;
+        margin-top: 1%;
     }
 
     &__container {
-        width: 80%;
-        height: 80%;
-        border: 3px solid white;
-        display: flex;
+        width: 35%;
+        height: 70%;
+        display: grid;
+        gap: 0;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        place-items: center;
+        column-gap: 10%;
+        margin-top: 2%;
 
         &__card {
-            width: 30%;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &__icon {
+                width: 30%;
+            }
+
+            &__title {
+                color: #00ffff;
+                width: 70%;
+                line-height: 120%;
+                text-align: center;
+                font-size: 1.5rem;
+            }
+
+            &__text {
+                width: 90%;
+                color: #ffffff;
+                margin-top: 5%;
+                text-align: center;
+                line-height: 130%;
+                font-size: 1.1rem;
+            }
+        }
+
+        &__link {
+            display: block;
+            width: 9%;
+            height: 4%;
+            border-radius: 50px;
+
+            &__button {
+                width: 100%;
+                height: 100%;
+                outline: none;
+                border: 0;
+                border-radius: 50px;
+                color: #000141;
+                font-size: 0.9rem;
+                white-space: nowrap;
+                font-family: "Poppins-Regular";
+                font-weight: bold;
+                background-color: #00ffff;
+                cursor: pointer;
+            }
+        }
+
+    }
+}
+
+.reviews {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    margin-top: 10%;
+    flex-direction: column;
+    gap: 3%;
+    
+    &__title{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    &__subtitle{
+        font-size: 1.45rem;
+        text-align: center;
+    }
+
+    &__container {
+        width: 100%;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
+        margin-top: 5%;
+
+        &__review {
+            position: relative;
+            width: 28%;
+            height: 100%;
+            border: 2px solid black;
+            display: flex;
+            background-color: #e5e5e5;
+            flex-direction: column;
+            align-items: center;
+            gap: 2%;
+            transition: 0.2s ease;
+            cursor: pointer;
+
+            &:hover{
+                scale: 1.05;
+                box-shadow: 38px 5px 13px -15px rgba(0,0,0,0.1);
+            }
+
+
+            &__name {
+                text-align: center;
+                font-size: 1.3rem;
+                margin-top: 5%;
+            }
+
+            &__stars {
+                position: absolute;
+                bottom: 10%;
+                left: 10%;
+            }
+
+            &__text {
+                width: 90%;
+                text-align: center;
+                font-size: 1.2rem;
+                margin-top: 5%;
+                line-height: 150%;
+            }
+        }
+    }
+}
+
+.slider {
+    margin-top: 5%;
+    width: 100%;
+    background-color: #CFD8DC;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+
+    &__title {
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 1%;
+        font-family: "Poppins-Regular";
+        color: #1565C0;
+    }
+
+    &__track {
+        display: flex;
+        width: 200%;
+        margin-right: 5%;
+        height: 60%;
+        overflow: hidden;
+        align-items: center;
+        animation: scroll 10s linear infinite;
+        will-change: transform;
+        backface-visibility: hidden;
+
+        &__slide {
+            width: 10%;
             height: 50%;
-            border: 3px solid black;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+
+            &--1 {
+                background-image: url("/assets/images/businesses/Adidas-Logo.png");
+            }
+
+            &--2 {
+                background-image: url("/assets/images/businesses/apple_logo_icon.png");
+            }
+
+            &--3 {
+                background-image: url("/assets/images/businesses/logo-Gmail.png");
+            }
+
+            &--4 {
+                background-image: url("/assets/images/businesses/netflix-logos-and-brands-icon.png");
+            }
+
+            &--5 {
+                background-image: url("/assets/images/businesses/Nike-Logo.png");
+            }
+
+            &--6 {
+                background-image: url("/assets/images/businesses/png-clipart-chanel-no-5-fashion-logo-chanel-logo-text-chanel.png");
+            }
+        }
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.doubts {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20%;
+    margin-top: 5%;
+    align-items: center;
+
+    &__title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    &__link {
+        display: block;
+        width: 15%;
+        height: 25%;
+        border-radius: 10px;
+        color: red;
+
+        &__button {
+            width: 100%;
+            height: 100%;
+            border: 1px solid black;
+            border-radius: 10px;
+            outline: none;
+            background-color: #CFD8DC;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            font-size: 1.15rem;
+            transition: 0.3s ease;
+            z-index: 0;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 0;
+                border-radius: 10px;
+                height: 100%;
+                opacity: 0;
+                z-index: -1;
+                mix-blend-mode: multiply;
+                visibility: hidden;
+                transition: 0.3s ease;
+                background: linear-gradient(220.55deg, #4643DF 0%, #0B0A47 100%);
+            }
+
+            &:hover {
+                color: #ffffff;
+
+                &::before {
+                    width: 100%;
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
         }
     }
 }
