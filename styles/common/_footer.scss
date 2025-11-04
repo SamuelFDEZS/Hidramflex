@@ -1,0 +1,189 @@
+.footer {
+    width: 100%;
+    height: 58vh;
+    border: 3px solid black;
+    background-color: #020242;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__container {
+        width: 100%;
+        height: 95%;
+        display: flex;
+        gap: 2%;
+
+        &__link {
+            display: block;
+            width: 30%;
+            height: 30%;
+            margin-top: 5%;
+            margin-left: 5%;
+
+            &__logo {
+                filter: invert(1);
+            }
+        }
+
+        &__links {
+            width: 70%;
+            display: flex;
+            gap: 3%;
+
+            &__section {
+                margin-top: 10%;
+                width: 20%;
+                height: 50%;
+                display: flex;
+                flex-direction: column;
+                gap: 5%;
+
+                &__title {
+                    font-size: 1.7rem;
+                    color: #00ffff;
+                }
+
+                &__list {
+                    width: 100%;
+                    height: 70%;
+                    margin-top: 5%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10%;
+
+                    &__item {
+                        font-size: 1.3rem;
+
+                        & a {
+                            text-decoration: none;
+                            color: #ffffff;
+                            transition: 0.3s ease;
+
+                            &:hover {
+                                color: #00ffff79;
+                            }
+                        }
+                    }
+                }
+
+                &--hidramflex {
+                    margin-left: 15%;
+                }
+
+                &--socials {
+                    & .footer__container__links__section__list {
+                        margin-top: 10%;
+                        gap: 10%;
+                        flex-direction: row;
+
+                        &__item {
+                            font-size: 2rem;
+                            width: 20%;
+                            height: 30%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            & a {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 100%;
+                                height: 100%;
+                                border-radius: 100%;
+                                position: relative;
+
+                                &:hover{
+                                    color: #ffffff;
+                                }
+                                & span{
+                                    position: relative;
+                                    z-index: 2;
+                                }
+
+                                &.instagram {
+                                    &::before {
+                                        content: '';
+                                        position: absolute;
+                                        inset: 0;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        border-radius: 100%;
+                                        background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+                                        z-index: 0;
+                                        transition: 0.3s ease;
+                                    }
+
+                                    &:hover {
+                                        &::before{
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                }
+
+                                &.facebook{
+                                    &::before {
+                                        content: '';
+                                        position: absolute;
+                                        inset: 0;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        border-radius: 100%;
+                                        background: #1877F2;
+                                        z-index: 0;
+                                        transition: 0.3s ease;
+                                    }
+
+                                    &:hover {
+                                        &::before{
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                }
+
+                                &.linkedin{
+                                    &::before {
+                                        content: '';
+                                        position: absolute;
+                                        inset: 0;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        border-radius: 100%;
+                                        background: #0A66C2;
+                                        z-index: 0;
+                                        transition: 0.3s ease;
+                                    }
+
+                                    &:hover {
+                                        &::before{
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__copyright-container {
+        width: 100%;
+        height: 8%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000326;
+        border: 2px solid #23244b;
+
+        &__text {
+            font-size: 1.2rem;
+            word-spacing: 150%;
+        }
+    }
+}

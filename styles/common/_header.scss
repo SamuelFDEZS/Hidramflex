@@ -5,7 +5,7 @@
     top: 0;
     display: flex;
     align-items: center;
-    background-color: #1565c0;
+    background: linear-gradient(220.55deg, #4643DF 0%, #0B0A47 100%);
     color: #ffffff;
     gap: 2%;
     z-index: 10;
@@ -46,6 +46,7 @@
         width: 40%;
         height: 100%;
         display: flex;
+        margin-left: 5%;
 
         &__list {
             width: 100%;
@@ -74,6 +75,24 @@
                     }
                 }
             }
+        }
+    }
+
+    &__assist-button{
+        width: 8%;
+        height: 55%;
+        border-radius: 10px;
+        outline: none;
+        border: 1px solid #ffffff;
+        font-size: 1rem;
+        color: #ffffff;
+        cursor: pointer;
+        margin-left: 5%;
+        background: linear-gradient(220.55deg, #A531DC 0%, #4300B1 100%);
+        transition: 0.3s ease;
+
+        &:hover{
+            scale: 1.05;
         }
     }
 }

@@ -2,7 +2,6 @@
     width: 100%;
     height: 90vh;
     display: flex;
-    overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     margin-top: 8vh;
@@ -57,44 +56,71 @@
         background-attachment: fixed;
         position: relative;
 
-        &__text-container{
+        &__text-container {
             width: 30%;
-            height: 20%;
+            height: 30%;
             position: absolute;
             bottom: 30%;
             left: 15%;
             color: #ffffff;
-            border: 3px solid white;
             display: flex;
             flex-direction: column;
+            gap: 10%;
 
-            &__title{
-                font-size: 3.5rem;
+            &__title {
+                font-size: 4.5rem;
+                font-family: "Poppins-Regular";
                 line-height: 130%;
+                font-weight: bolder;
             }
 
-            &__link{
+            &__short-description {
+                font-size: 1.8rem;
+            }
 
+            &__link {
+                display: block;
+                width: 30%;
+                height: 20%;
+
+                &__button {
+                    width: 100%;
+                    height: 100%;
+                    border: 3px solid white;
+                    outline: none;
+                    background: transparent;
+                    color: #ffffff;
+                    font-size: 1.5rem;
+                    margin-top: 15%;
+                    cursor: pointer;
+                    transition: 0.3s ease;
+
+                    &:hover {
+                        scale: 1.05;
+                        background: #00ffff83;
+                    }
+                }
             }
         }
 
         &--1 {
-            background-image: url("https://images.unsplash.com/photo-1531512073830-ba890ca4eba2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9uZG8lMjBob3Jpem9udGFsfGVufDB8fDB8fHww&fm=jpg&q=60&w=3000");
+            background-image: url("https://www.tallereselpilar.com/cache~c-d-0-1-8-cd0184cc4830d12717982474f665915cf9942b72/tu-taller-mecanico-de-confianza.jpeg");
         }
 
         &--2 {
-            background-image: url("https://img.freepik.com/foto-gratis/vista-formacion-natural-montana-estetica-ensueno_23-2151700235.jpg");
+            background-image: url("https://motor.elpais.com/wp-content/uploads/2022/02/taller-2.jpg");
         }
 
         &--3 {
-            background-image: url("https://img.freepik.com/fotos-premium/paisaje-montanas-vista-al-lago_849906-18188.jpg?semt=ais_hybrid&w=740&q=80");
+            background-image: url("https://cercademiubicacionactual.com/wp-content/uploads/2024/08/Taller-mecanico-cerca-de-mi.jpg");
         }
 
         &--4 {
-            background-image: url("https://img.freepik.com/fotos-premium/espectacular-atardecer-sobre-sereno-paisaje-montanoso_1138224-9828.jpg?semt=ais_hybrid&w=740&q=80");
+            background-image: url("https://storage.googleapis.com/sigo-blog-production/2023/02/2.-Blog-2_2.jpg");
         }
+
         &--5 {
-            background-image: url("https://images.unsplash.com/photo-1587387119725-9d6bac0f22fb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aG9yaXpvbnRhbHxlbnwwfHwwfHx8MA%3D%3D&fm=jpg&q=60&w=3000");
+            background-image: url("https://www.todomecanica.com/media/k2/items/cache/e803da4b053dc3dafc2016f735cae8b9_L.jpg");
         }
     }
 }
@@ -269,7 +295,7 @@
 
 .light-services {
     width: 100%;
-    height: 75vh;
+    height: 100vh;
     margin-top: 18%;
     border: 3px solid black;
     background-image: url("/assets/images/logo-noinfo.jpeg");
@@ -389,13 +415,13 @@
     margin-top: 10%;
     flex-direction: column;
     gap: 3%;
-    
-    &__title{
+
+    &__title {
         font-size: 2.5rem;
         text-align: center;
     }
 
-    &__subtitle{
+    &__subtitle {
         font-size: 1.45rem;
         text-align: center;
     }
@@ -422,9 +448,9 @@
             transition: 0.2s ease;
             cursor: pointer;
 
-            &:hover{
+            &:hover {
                 scale: 1.05;
-                box-shadow: 38px 5px 13px -15px rgba(0,0,0,0.1);
+                box-shadow: 38px 5px 13px -15px rgba(0, 0, 0, 0.1);
             }
 
 
@@ -513,16 +539,6 @@
     }
 }
 
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
 .doubts {
     width: 100%;
     height: 20vh;
@@ -585,5 +601,15 @@
                 }
             }
         }
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
     }
 }

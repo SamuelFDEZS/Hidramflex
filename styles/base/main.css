@@ -200,7 +200,7 @@ body {
   top: 0;
   display: flex;
   align-items: center;
-  background-color: #1565c0;
+  background: linear-gradient(220.55deg, #4643DF 0%, #0B0A47 100%);
   color: #ffffff;
   gap: 2%;
   z-index: 10;
@@ -236,6 +236,7 @@ body {
   width: 40%;
   height: 100%;
   display: flex;
+  margin-left: 5%;
 }
 .header__menu__list {
   width: 100%;
@@ -262,12 +263,180 @@ body {
 .header__menu__list__item__link:hover {
   color: #29b6f6;
 }
+.header__assist-button {
+  width: 8%;
+  height: 55%;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #ffffff;
+  font-size: 1rem;
+  color: #ffffff;
+  cursor: pointer;
+  margin-left: 5%;
+  background: linear-gradient(220.55deg, #A531DC 0%, #4300B1 100%);
+  transition: 0.3s ease;
+}
+.header__assist-button:hover {
+  scale: 1.05;
+}
+
+.footer {
+  width: 100%;
+  height: 58vh;
+  border: 3px solid black;
+  background-color: #020242;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__container {
+  width: 100%;
+  height: 95%;
+  display: flex;
+  gap: 2%;
+}
+.footer__container__link {
+  display: block;
+  width: 30%;
+  height: 30%;
+  margin-top: 5%;
+  margin-left: 5%;
+}
+.footer__container__link__logo {
+  filter: invert(1);
+}
+.footer__container__links {
+  width: 70%;
+  display: flex;
+  gap: 3%;
+}
+.footer__container__links__section {
+  margin-top: 10%;
+  width: 20%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+.footer__container__links__section__title {
+  font-size: 1.7rem;
+  color: #00ffff;
+}
+.footer__container__links__section__list {
+  width: 100%;
+  height: 70%;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+}
+.footer__container__links__section__list__item {
+  font-size: 1.3rem;
+}
+.footer__container__links__section__list__item a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: 0.3s ease;
+}
+.footer__container__links__section__list__item a:hover {
+  color: rgba(0, 255, 255, 0.4745098039);
+}
+.footer__container__links__section--hidramflex {
+  margin-left: 15%;
+}
+.footer__container__links__section--socials .footer__container__links__section__list {
+  margin-top: 10%;
+  gap: 10%;
+  flex-direction: row;
+}
+.footer__container__links__section--socials .footer__container__links__section__list__item {
+  font-size: 2rem;
+  width: 20%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__container__links__section--socials .footer__container__links__section__list__item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  position: relative;
+}
+.footer__container__links__section--socials .footer__container__links__section__list__item a:hover {
+  color: #ffffff;
+}
+.footer__container__links__section--socials .footer__container__links__section__list__item a span {
+  position: relative;
+  z-index: 2;
+}
+.footer__container__links__section--socials .footer__container__links__section__list__item a.instagram::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 100%;
+  background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+  z-index: 0;
+  transition: 0.3s ease;
+}
+.footer__container__links__section--socials .footer__container__links__section__list__item a.instagram:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+.footer__container__links__section--socials .footer__container__links__section__list__item a.facebook::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 100%;
+  background: #1877F2;
+  z-index: 0;
+  transition: 0.3s ease;
+}
+.footer__container__links__section--socials .footer__container__links__section__list__item a.facebook:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+.footer__container__links__section--socials .footer__container__links__section__list__item a.linkedin::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 100%;
+  background: #0A66C2;
+  z-index: 0;
+  transition: 0.3s ease;
+}
+.footer__container__links__section--socials .footer__container__links__section__list__item a.linkedin:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+.footer__copyright-container {
+  width: 100%;
+  height: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000326;
+  border: 2px solid #23244b;
+}
+.footer__copyright-container__text {
+  font-size: 1.2rem;
+  word-spacing: 150%;
+}
 
 .carrusel {
   width: 100%;
   height: 90vh;
   display: flex;
-  overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   margin-top: 8vh;
@@ -317,33 +486,59 @@ body {
 }
 .carrusel__img__text-container {
   width: 30%;
-  height: 20%;
+  height: 30%;
   position: absolute;
   bottom: 30%;
   left: 15%;
   color: #ffffff;
-  border: 3px solid white;
   display: flex;
   flex-direction: column;
+  gap: 10%;
 }
 .carrusel__img__text-container__title {
-  font-size: 3.5rem;
+  font-size: 4.5rem;
+  font-family: "Poppins-Regular";
   line-height: 130%;
+  font-weight: bolder;
+}
+.carrusel__img__text-container__short-description {
+  font-size: 1.8rem;
+}
+.carrusel__img__text-container__link {
+  display: block;
+  width: 30%;
+  height: 20%;
+}
+.carrusel__img__text-container__link__button {
+  width: 100%;
+  height: 100%;
+  border: 3px solid white;
+  outline: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-top: 15%;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.carrusel__img__text-container__link__button:hover {
+  scale: 1.05;
+  background: rgba(0, 255, 255, 0.5137254902);
 }
 .carrusel__img--1 {
-  background-image: url("https://images.unsplash.com/photo-1531512073830-ba890ca4eba2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9uZG8lMjBob3Jpem9udGFsfGVufDB8fDB8fHww&fm=jpg&q=60&w=3000");
+  background-image: url("https://www.tallereselpilar.com/cache~c-d-0-1-8-cd0184cc4830d12717982474f665915cf9942b72/tu-taller-mecanico-de-confianza.jpeg");
 }
 .carrusel__img--2 {
-  background-image: url("https://img.freepik.com/foto-gratis/vista-formacion-natural-montana-estetica-ensueno_23-2151700235.jpg");
+  background-image: url("https://motor.elpais.com/wp-content/uploads/2022/02/taller-2.jpg");
 }
 .carrusel__img--3 {
-  background-image: url("https://img.freepik.com/fotos-premium/paisaje-montanas-vista-al-lago_849906-18188.jpg?semt=ais_hybrid&w=740&q=80");
+  background-image: url("https://cercademiubicacionactual.com/wp-content/uploads/2024/08/Taller-mecanico-cerca-de-mi.jpg");
 }
 .carrusel__img--4 {
-  background-image: url("https://img.freepik.com/fotos-premium/espectacular-atardecer-sobre-sereno-paisaje-montanoso_1138224-9828.jpg?semt=ais_hybrid&w=740&q=80");
+  background-image: url("https://storage.googleapis.com/sigo-blog-production/2023/02/2.-Blog-2_2.jpg");
 }
 .carrusel__img--5 {
-  background-image: url("https://images.unsplash.com/photo-1587387119725-9d6bac0f22fb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aG9yaXpvbnRhbHxlbnwwfHwwfHx8MA%3D%3D&fm=jpg&q=60&w=3000");
+  background-image: url("https://www.todomecanica.com/media/k2/items/cache/e803da4b053dc3dafc2016f735cae8b9_L.jpg");
 }
 
 .expectations {
@@ -491,7 +686,7 @@ body {
 
 .light-services {
   width: 100%;
-  height: 75vh;
+  height: 100vh;
   margin-top: 18%;
   border: 3px solid black;
   background-image: url("/assets/images/logo-noinfo.jpeg");
@@ -707,14 +902,6 @@ body {
   background-image: url("/assets/images/businesses/png-clipart-chanel-no-5-fashion-logo-chanel-logo-text-chanel.png");
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
 .doubts {
   width: 100%;
   height: 20vh;
@@ -772,4 +959,13 @@ body {
   width: 100%;
   opacity: 1;
   visibility: visible;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }/*# sourceMappingURL=main.css.map */
