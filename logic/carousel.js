@@ -21,6 +21,8 @@ const changeClassAfterDelay = (element, action, classToRemove, classToAdd, delay
 };
 
 const autoChangeSlide = () => {
+    if (isAnimating) return;
+    isAnimating = true;
     const currentSlide = slides[index];
     const nextIndex = (index + 1) % slides.length;
     const nextSlide = slides[nextIndex];
@@ -34,10 +36,7 @@ const autoChangeSlide = () => {
     nextSlide.classList.add('active');
 
     index = nextIndex;
-    setTimeout(() => {
-        currentSlide.classList.remove('last');
-        currentSlide.classList.add('previous');
-    }, 1000);
+    changeClassAfterDelay(currentSlide, 'both', 'last', 'previous', 1000);
 };
 
 const goPreviousSlide = () => {

@@ -269,12 +269,15 @@ body {
   border-radius: 10px;
   outline: none;
   border: 1px solid #ffffff;
-  font-size: 1rem;
-  color: #ffffff;
   cursor: pointer;
   margin-left: 5%;
   background: linear-gradient(220.55deg, #A531DC 0%, #4300B1 100%);
   transition: 0.3s ease;
+}
+.header__assist-button a {
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
 }
 .header__assist-button:hover {
   scale: 1.05;

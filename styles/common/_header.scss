@@ -78,20 +78,24 @@
         }
     }
 
-    &__assist-button{
+    &__assist-button {
         width: 8%;
         height: 55%;
         border-radius: 10px;
         outline: none;
         border: 1px solid #ffffff;
-        font-size: 1rem;
-        color: #ffffff;
         cursor: pointer;
         margin-left: 5%;
         background: linear-gradient(220.55deg, #A531DC 0%, #4300B1 100%);
         transition: 0.3s ease;
 
-        &:hover{
+        & a {
+            font-size: 1rem;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        &:hover {
             scale: 1.05;
         }
     }
