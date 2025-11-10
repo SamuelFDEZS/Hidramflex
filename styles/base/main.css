@@ -506,12 +506,12 @@ body {
   z-index: 3;
 }
 .carrusel__img.last {
-  left: -200%;
-  z-index: 2;
-}
-.carrusel__img.before-last {
   left: 0;
   z-index: 2;
+}
+.carrusel__img.previous {
+  left: -200%;
+  z-index: 1;
 }
 .carrusel__img__text-container {
   width: 30%;
