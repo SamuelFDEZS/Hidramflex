@@ -1,3 +1,48 @@
+@use '../base/mixin' as *;
+
+
+.screen-size {
+    position: fixed;
+    width: 10%;
+    height: 15%;
+    top: 10%;
+    left: 5%;
+    border: 3px solid red;
+    color: #ffffff;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(196, 196, 196);
+    border-radius: 10px;
+    font-size: 2rem;
+
+    &::before {
+        content: '';
+        @include breakpoint(xxl) {
+            content: 'xxl';
+        }
+        @include breakpoint(xl) {
+            content: 'xl';
+        }
+        @include breakpoint(lg) {
+            content: 'lg';
+        }
+        @include breakpoint(md) {
+            content: 'md';
+        }
+        @include breakpoint(sm) {
+            content: 'sm';
+        }
+        @include breakpoint(xs) {
+            content: 'xs';
+        }
+        @include breakpoint(xxs) {
+            content: 'xxs';
+        }
+    }
+}
+
 .carrusel {
     width: 100vw;
     height: 93vh;
@@ -26,7 +71,7 @@
         transition: 0.3s ease;
         cursor: pointer;
 
-        &::before{
+        &::before {
             content: '';
             position: absolute;
             background: linear-gradient(220.55deg, #3793FF 0%, #0017E4 100%);
@@ -75,12 +120,12 @@
         z-index: 1;
         transition: left 1s ease;
 
-        &.active{
+        &.active {
             left: 0;
             z-index: 3;
         }
 
-        &.last{
+        &.last {
             left: 0;
             z-index: 2;
         }
