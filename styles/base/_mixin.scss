@@ -4,7 +4,8 @@ $breakpoints: (
     "sm": "(min-width: 576px) and (max-width: 767.98px)",
     "md": "(min-width: 768px) and (max-width: 991.98px)",
     "lg": "(min-width: 992px) and (max-width: 1199.98px)",
-    "xl": "(min-width: 1200px) and (max-width: 1799.98px)",
+    "pxl": "(min-width: 1200px) and (max-width: 1450.98px)",
+    "xl": "(min-width: 1451px) and (max-width: 1799.98px)",
     "xxl": "min-width: 1800px",
 );
 
@@ -20,4 +21,31 @@ $breakpoints: (
     @else {
         @error "Oops, seems like the breakpoint #{$size} isn't defined yet";
     }
+}
+
+@mixin responsive-home-expectations() {
+    width: 80%;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    column-gap: 0;
+    row-gap: 3%;
+    margin-top: 1%;
+    @content;
+}
+
+@mixin responsive-home-expectations-card() {
+    width: 80%;
+    height: 55%;
+    border-radius: 5px;
+    @content;
+}
+
+@mixin responsive-home-expectations-item() {
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    @content;
 }

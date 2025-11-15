@@ -66,11 +66,32 @@
                 align-items: center;
                 font-size: 1.2rem;
 
-                @include breakpoint(xl){
-                    font-size: 1rem;
-                }
-                @include breakpoint(lg){
+                @include breakpoint(xl) {
                     font-size: 0.7rem;
+                }
+
+                @include breakpoint(pxl) {
+                    font-size: 0.7rem;
+                }
+
+                @include breakpoint(lg) {
+                    font-size: 0.5rem;
+                }
+
+                @include breakpoint(md) {
+                    font-size: 0.4rem;
+                }
+
+                @include breakpoint(sm) {
+                    font-size: 0.3rem;
+                }
+
+                @include breakpoint(xs) {
+                    font-size: 0.25rem;
+                }
+
+                @include breakpoint(xxs) {
+                    font-size: 0.2rem;
                 }
 
                 &__link {
@@ -94,14 +115,77 @@
         outline: none;
         border: 1px solid #ffffff;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-left: 5%;
         background: linear-gradient(220.55deg, #A531DC 0%, #4300B1 100%);
         transition: 0.3s ease;
 
+        @include breakpoint(xl) {
+            width: 10%;
+        }
+
+        @include breakpoint(pxl) {
+            width: 10%;
+        }
+
+        @include breakpoint(lg) {
+            width: 9%;
+        }
+
+        @include breakpoint(md) {
+            width: 9%;
+            border-width: 0.7px;
+        }
+
+        @include breakpoint(sm) {
+            width: 9%;
+            border-width: 0.7px;
+        }
+
+        @include breakpoint(xs) {
+            width: 10%;
+            border-width: 0.5px;
+        }
+        @include breakpoint(xxs) {
+            width: 10%;
+            border-width: 0.4px;
+        }
+
         & a {
+            white-space: nowrap;
             font-size: 1rem;
             color: #ffffff;
             text-decoration: none;
+
+            @include breakpoint(xl) {
+                font-size: 0.75rem;
+            }
+
+            @include breakpoint(pxl) {
+                font-size: 0.75rem;
+            }
+
+            @include breakpoint(lg) {
+                font-size: 0.5rem;
+            }
+
+            @include breakpoint(md) {
+                font-size: 0.4rem;
+            }
+
+            @include breakpoint(sm) {
+                font-size: 0.35rem;
+            }
+
+            @include breakpoint(xs) {
+                font-size: 0.3rem;
+            }
+
+            @include breakpoint(xxs) {
+                font-size: 0.2rem;
+            }
         }
 
         &:hover {
