@@ -805,8 +805,6 @@
     }
 }
 
-/*-----------------------------------------Hasta aquí va el responsive-----------------------------------------------------------------------------*/
-
 .light-services {
     width: 100%;
     height: 100vh;
@@ -862,17 +860,17 @@
             font-size: 0.7rem;
             word-spacing: 1px;
         }
-        
+
         @include breakpoint(sm) {
             word-spacing: 1px;
             font-size: 0.5rem;
         }
-        
+
         @include breakpoint(xs) {
             word-spacing: 1px;
             font-size: 0.4rem;
         }
-        
+
         @include breakpoint(xxs) {
             word-spacing: 1px;
             font-size: 0.3rem;
@@ -930,7 +928,7 @@
         @include breakpoint(xl) {
             width: 45%;
         }
-        
+
         @include breakpoint(pxl) {
             width: 50%;
         }
@@ -938,20 +936,20 @@
         @include breakpoint(lg) {
             width: 45%;
         }
-        
+
         @include breakpoint(md) {
             width: 45%;
         }
-        
+
         @include breakpoint(sm) {
             width: 45%;
         }
-        
+
         @include breakpoint(xs) {
             width: 45%;
             row-gap: 5%;
         }
-        
+
         @include breakpoint(xxs) {
             width: 45%;
         }
@@ -977,15 +975,15 @@
                 @include breakpoint(lg) {
                     width: 22%;
                 }
-                
+
                 @include breakpoint(md) {
                     width: 22%;
                 }
-                
+
                 @include breakpoint(sm) {
                     width: 22%;
                 }
-                
+
                 @include breakpoint(xs) {
                     width: 22%;
                 }
@@ -1087,17 +1085,17 @@
             @include breakpoint(lg) {
                 width: 11%;
             }
-            
+
             @include breakpoint(md) {
                 width: 10%;
                 height: 3.5%;
             }
-            
+
             @include breakpoint(sm) {
                 width: 10%;
                 height: 3.5%;
             }
-            
+
             @include breakpoint(xs) {
                 width: 10%;
                 height: 3.5%;
@@ -1157,22 +1155,109 @@
     }
 }
 
+/*-----------------------------------------Hasta aquí va el responsive-----------------------------------------------------------------------------*/
+
 .reviews {
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     display: flex;
     margin-top: 10%;
     flex-direction: column;
     gap: 3%;
 
+    @include breakpoint(xl) {
+        height: 65vh;
+    }
+
+    @include breakpoint(pxl) {
+        height: 65vh;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 0.5rem;
+    }
+
+    @include breakpoint(md) {
+        font-size: 0.4rem;
+    }
+
+    @include breakpoint(sm) {
+        font-size: 0.3rem;
+    }
+
+    @include breakpoint(xs) {
+        font-size: 0.25rem;
+    }
+
+    @include breakpoint(xxs) {
+        font-size: 0.2rem;
+    }
+
     &__title {
         font-size: 2.5rem;
         text-align: center;
+
+        @include breakpoint(xl) {
+            font-size: 2rem;
+        }
+
+        @include breakpoint(pxl) {
+            font-size: 1.8rem;
+        }
+
+        @include breakpoint(lg) {
+            font-size: 0.5rem;
+        }
+
+        @include breakpoint(md) {
+            font-size: 0.4rem;
+        }
+
+        @include breakpoint(sm) {
+            font-size: 0.3rem;
+        }
+
+        @include breakpoint(xs) {
+            font-size: 0.25rem;
+        }
+
+        @include breakpoint(xxs) {
+            font-size: 0.2rem;
+        }
     }
 
     &__subtitle {
         font-size: 1.45rem;
         text-align: center;
+        margin-top: 1%;
+
+        @include breakpoint(xl) {
+            font-size: 1.3rem;
+        }
+
+        @include breakpoint(pxl) {
+            font-size: 1.2rem;
+        }
+
+        @include breakpoint(lg) {
+            font-size: 0.5rem;
+        }
+
+        @include breakpoint(md) {
+            font-size: 0.4rem;
+        }
+
+        @include breakpoint(sm) {
+            font-size: 0.3rem;
+        }
+
+        @include breakpoint(xs) {
+            font-size: 0.25rem;
+        }
+
+        @include breakpoint(xxs) {
+            font-size: 0.2rem;
+        }
     }
 
     &__container {
@@ -1207,6 +1292,10 @@
                 text-align: center;
                 font-size: 1.3rem;
                 margin-top: 5%;
+
+                @include breakpoint(pxl) {
+                    font-size: 1.2rem;
+                }
             }
 
             &__stars {
@@ -1217,10 +1306,39 @@
 
             &__text {
                 width: 90%;
+                height: 60%;
                 text-align: center;
                 font-size: 1.2rem;
                 margin-top: 5%;
                 line-height: 150%;
+
+                @include breakpoint(xl) {
+                    font-size: 1rem;
+                }
+
+                @include breakpoint(pxl) {
+                    font-size: 0.9rem;
+                }
+
+                @include breakpoint(lg) {
+                    font-size: 0.5rem;
+                }
+
+                @include breakpoint(md) {
+                    font-size: 0.4rem;
+                }
+
+                @include breakpoint(sm) {
+                    font-size: 0.3rem;
+                }
+
+                @include breakpoint(xs) {
+                    font-size: 0.25rem;
+                }
+
+                @include breakpoint(xxs) {
+                    font-size: 0.2rem;
+                }
             }
         }
     }
@@ -1234,6 +1352,7 @@
     display: flex;
     flex-direction: column;
     gap: 5%;
+    overflow-x: hidden;
 
     &__title {
         text-align: center;
@@ -1241,6 +1360,14 @@
         margin-top: 1%;
         font-family: "Poppins-Regular";
         color: #1565C0;
+
+        @include breakpoint(xl) {
+            font-size: 1.7rem;
+        }
+
+        @include breakpoint(pxl) {
+            font-size: 1.5rem;
+        }
     }
 
     &__track {
@@ -1300,6 +1427,10 @@
     &__title {
         font-size: 2rem;
         text-align: center;
+
+        @include breakpoint(pxl){
+            font-size: 1.7rem;
+        }
     }
 
     &__link {
@@ -1308,6 +1439,13 @@
         height: 25%;
         border-radius: 10px;
         color: red;
+
+        @include breakpoint(xl) {
+            height: 30%;
+        }
+        @include breakpoint(pxl) {
+            height: 30%;
+        }
 
         &__button {
             width: 100%;
@@ -1322,6 +1460,10 @@
             font-size: 1.15rem;
             transition: 0.3s ease;
             z-index: 0;
+
+            @include breakpoint(pxl) {
+                font-size: 1rem;
+            }
 
             &::before {
                 content: '';
