@@ -10,9 +10,29 @@
     background: linear-gradient(220.55deg, #4643DF 0%, #0B0A47 100%);
     color: #ffffff;
     gap: 2%;
-    z-index: 10;
+    z-index: 5;
     transform: translate(0, -100%);
     transition: 0.3s;
+
+    @include breakpoint(lg) {
+        height: 8vh;
+    }
+
+    @include breakpoint(md) {
+        height: 7vh;
+    }
+
+    @include breakpoint(sm) {
+        height: 9vh;
+    }
+
+    @include breakpoint(xs) {
+        height: 8vh;
+    }
+
+    @include breakpoint(xxs) {
+        height: 8vh;
+    }
 
     &.visible {
         transform: translate(0, 0);
@@ -26,6 +46,31 @@
         align-items: center;
         margin-left: 12%;
 
+        @include breakpoint(lg) {
+            width: 25%;
+            margin-left: 5%;
+        }
+
+        @include breakpoint(md) {
+            width: 25%;
+            margin-left: 5%;
+        }
+
+        @include breakpoint(sm) {
+            width: 25%;
+            margin-left: 5%;
+        }
+
+        @include breakpoint(xs) {
+            width: 26%;
+            margin-left: 3%;
+        }
+
+        @include breakpoint(xxs) {
+            width: 28%;
+            margin-left: 3%;
+        }
+
         &__link {
             display: flex;
             justify-content: center;
@@ -38,10 +83,50 @@
                 width: 65%;
                 height: 100%;
                 cursor: pointer;
-                filter: invert(1);
+
+                @include breakpoint(lg) {
+                    width: 80%;
+                    height: 80%;
+                }
+
+                @include breakpoint(md) {
+                    width: 80%;
+                    height: 80%;
+                }
+
+                @include breakpoint(sm) {
+                    width: 80%;
+                    height: 80%;
+                }
+
+                @include breakpoint(xs) {
+                    width: 100%;
+                    height: 80%;
+                }
+
+                @include breakpoint(xxs) {
+                    width: 100%;
+                    height: 80%;
+                }
             }
         }
 
+    }
+
+    &__collapsed-menu {
+        display: none;
+        position: absolute;
+        right: 7%;
+        transition: 0.3s ease;
+        cursor: pointer;
+
+        @include breakpoint(xs) {
+            @include mobile-burger();
+        }
+
+        @include breakpoint(xxs) {
+            @include mobile-burger();
+        }
     }
 
     &__menu {
@@ -49,6 +134,47 @@
         height: 100%;
         display: flex;
         margin-left: 5%;
+        transition: 0.5s ease-in-out;
+
+        @include breakpoint(xs) {
+            @include mobile-menu();
+        }
+
+        @include breakpoint(xxs) {
+            @include mobile-menu();
+        }
+
+        &__exit {
+            position: absolute;
+            top: 2%;
+            right: 7%;
+            color: #ffffff;
+            display: none;
+
+            @include breakpoint(xs) {
+                display: block;
+                font-size: 1.5rem;
+            }
+
+            @include breakpoint(xxs) {
+                display: block;
+                font-size: 1.5rem;
+            }
+        }
+
+        &.visible {
+            @include breakpoint(xs) {
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(0%);
+            }
+
+            @include breakpoint(xxs) {
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(0%);
+            }
+        }
 
         &__list {
             width: 100%;
@@ -57,6 +183,31 @@
             justify-content: center;
             align-items: center;
             gap: 5%;
+
+            @include breakpoint(lg) {
+                gap: 12%;
+            }
+
+            @include breakpoint(md) {
+                gap: 11%;
+            }
+
+            @include breakpoint(sm) {
+                gap: 12%;
+            }
+
+            @include breakpoint(xs) {
+                flex-direction: column;
+                height: 80%;
+                gap: 7%;
+            }
+
+            @include breakpoint(xxs) {
+                flex-direction: column;
+                height: 80%;
+                gap: 7%;
+            }
+
 
             &__item {
                 width: 12%;
@@ -75,23 +226,23 @@
                 }
 
                 @include breakpoint(lg) {
-                    font-size: 0.5rem;
+                    font-size: 0.8rem;
                 }
 
                 @include breakpoint(md) {
-                    font-size: 0.4rem;
+                    font-size: 0.7rem;
                 }
 
                 @include breakpoint(sm) {
-                    font-size: 0.3rem;
+                    font-size: 0.6rem;
                 }
 
                 @include breakpoint(xs) {
-                    font-size: 0.25rem;
+                    font-size: 1rem;
                 }
 
                 @include breakpoint(xxs) {
-                    font-size: 0.2rem;
+                    font-size: 0.8rem;
                 }
 
                 &__link {
@@ -106,21 +257,62 @@
                 }
             }
         }
+
+        &__assist-button {
+            display: none;
+
+            @include breakpoint(xs) {
+
+                @include assist-button() {
+                    height: 4.5%;
+                    width: 65%;
+                    font-size: 0.75rem;
+                    white-space: nowrap;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    display: block;
+                }
+
+                & a {
+                    text-decoration: none;
+                    color: #ffffff;
+                    width: 100%;
+                }
+
+                &:hover {
+                    scale: 1.05;
+                }
+            }
+
+            @include breakpoint(xxs) {
+
+                @include assist-button() {
+                    height: 4.5%;
+                    width: 65%;
+                    font-size: 0.75rem;
+                    white-space: nowrap;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    display: block;
+                }
+
+                & a {
+                    text-decoration: none;
+                    color: #ffffff;
+                    width: 100%;
+                }
+
+                &:hover {
+                    scale: 1.05;
+                }
+            }
+        }
     }
 
     &__assist-button {
-        width: 8%;
-        height: 55%;
-        border-radius: 10px;
-        outline: none;
-        border: 1px solid #ffffff;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 5%;
-        background: linear-gradient(220.55deg, #A531DC 0%, #4300B1 100%);
-        transition: 0.3s ease;
+        @include assist-button();
 
         @include breakpoint(xl) {
             width: 10%;
@@ -131,26 +323,36 @@
         }
 
         @include breakpoint(lg) {
-            width: 9%;
+            width: 12%;
+            height: 41%;
         }
 
         @include breakpoint(md) {
-            width: 9%;
+            width: 12%;
+            height: 45%;
+            margin-left: 6%;
             border-width: 0.7px;
         }
 
         @include breakpoint(sm) {
-            width: 9%;
+            width: 11%;
+            height: 50%;
             border-width: 0.7px;
+            margin-left: 7%;
         }
 
         @include breakpoint(xs) {
-            width: 10%;
+            width: 25%;
+            height: 50%;
             border-width: 0.5px;
+            margin-left: 17%;
         }
+
         @include breakpoint(xxs) {
-            width: 10%;
-            border-width: 0.4px;
+            width: 25%;
+            height: 50%;
+            border-width: 0.5px;
+            margin-left: 17%;
         }
 
         & a {
@@ -168,23 +370,27 @@
             }
 
             @include breakpoint(lg) {
-                font-size: 0.5rem;
+                font-size: 0.75rem;
             }
 
             @include breakpoint(md) {
-                font-size: 0.4rem;
+                font-size: 0.7rem;
+                line-height: 130%;
             }
 
             @include breakpoint(sm) {
-                font-size: 0.35rem;
+                font-size: 0.5rem;
+                line-height: 130%;
             }
 
             @include breakpoint(xs) {
-                font-size: 0.3rem;
+                font-size: 0.7rem;
+                white-space: wrap;
             }
 
             @include breakpoint(xxs) {
-                font-size: 0.2rem;
+                font-size: 0.7rem;
+                white-space: wrap;
             }
         }
 

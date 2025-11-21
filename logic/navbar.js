@@ -2,13 +2,28 @@ if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
 }
 
-const navBar = document.querySelector('.header');
-let scrollTop = 0;
-let threshold = 0;
+const header = document.querySelector('.header');
+const burgerMenu = document.querySelector('.header__collapsed-menu');
+const menuIcon = document.querySelector('.header__collapsed-menu__icon');
+const menu = document.querySelector('.header__menu');
+const exitMenu = document.querySelector('.header__menu__exit');
+const filter = document.querySelector('.blur-filter');
+const originalNextSibling = menu.nextElementSibling;
 
+let scrollTop = 0;
+let headerHeight = 0;
+
+// Take the navigation menu out of the header
+
+const moveNavForMobile = () => {
+    if (window.innerWidth < 576) {
+        document.body.appendChild(menu);
+    } else {
+        header.insertBefore(menu, originalNextSibling);
+    }
+};
 const updateThreshold = () => {
-    const headerHeight = navBar.offsetHeight;
-    threshold = window.innerHeight * 0.05 + headerHeight;
+    headerHeight = header.offsetHeight;
 };
 window.addEventListener('load', () => {
     updateThreshold();
@@ -17,17 +32,38 @@ window.addEventListener('load', () => {
     });
 });
 
-window.addEventListener('resize', updateThreshold);
+moveNavForMobile();
+
+window.addEventListener('resize', () => {
+    updateThreshold();
+    moveNavForMobile();
+});
 
 window.addEventListener('scroll', () => {
     let { pageYOffset } = window;
-    if (pageYOffset > scrollTop) {
-        navBar.classList.remove('visible');
+    if (pageYOffset > scrollTop && pageYOffset > headerHeight) {
+        header.classList.remove('visible');
     } else if (pageYOffset < scrollTop) {
-        navBar.classList.add('visible');
+        header.classList.add('visible');
     }
 
     scrollTop = pageYOffset <= 0 ? 0 : pageYOffset;
 },
 { passive: true }
 );
+
+// Logic for the side menu
+
+burgerMenu.addEventListener('click', (e) => {
+    e.preventDefault();
+    menu.classList.toggle('visible');
+    document.body.classList.toggle('no-scroll');
+    filter.classList.toggle('applied');
+});
+
+exitMenu.addEventListener('click', (e) => {
+    e.preventDefault();
+    menu.classList.toggle('visible');
+    document.body.classList.toggle('no-scroll');
+    filter.classList.toggle('applied');
+});

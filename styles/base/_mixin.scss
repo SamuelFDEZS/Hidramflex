@@ -49,3 +49,50 @@ $breakpoints: (
     align-items: center;
     @content;
 }
+
+@mixin assist-button() {
+    width: 8%;
+    height: 55%;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    background: linear-gradient(220.55deg, #A531DC 0%, #4300B1 100%);
+    transition: 0.3s ease;
+    @content;
+}
+
+@mixin mobile-burger() {
+    display: flex;
+    opacity: 1;
+    font-size: 1.5rem;
+    visibility: visible;
+    justify-content: center;
+    align-items: center;
+    width: 5%;
+    height: 40%;
+    color: #ffffff;
+    text-decoration: none;
+    @content;
+}
+
+@mixin mobile-menu() {
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 7;
+    border: 1px solid black;
+    background: linear-gradient(220.55deg, #4643DF 0%, #0B0A47 100%);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    @content;
+}

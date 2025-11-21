@@ -54,6 +54,22 @@
     }
 }
 
+.blur-filter {
+    position: fixed;
+    inset: 0;
+    z-index: 6;
+    backdrop-filter: blur(2px);
+    filter: brightness(0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease;
+
+    &.applied {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
 .carrusel {
     width: 100vw;
     height: 93vh;
@@ -62,16 +78,32 @@
     overflow-x: hidden;
     position: relative;
 
+    @include breakpoint(md) {
+        margin-top: 7vh;
+    }
+
+    @include breakpoint(sm) {
+        margin-top: 6vh;
+    }
+
+    @include breakpoint(xs) {
+        height: 100vh;
+    }
+
+    @include breakpoint(xxs) {
+        height: 100vh;
+    }
+
     &__left-button,
     &__right-button {
         flex: none;
-        width: 3%;
-        height: 7%;
+        width: 4%;
         position: absolute;
         align-self: center;
         color: white;
         border: 2px solid white;
-        border-radius: 100%;
+        border-radius: 50%;
+        aspect-ratio: 1 / 1;
         display: flex;
         z-index: 4;
         justify-content: center;
@@ -84,18 +116,22 @@
 
         @include breakpoint(xl) {
             font-size: 2.3rem;
+            width: 3.5%;
         }
 
         @include breakpoint(pxl) {
             font-size: 2rem;
+            width: 3.5%;
         }
 
         @include breakpoint(lg) {
-            font-size: 1.5rem;
+            font-size: 2rem;
+            width: 5.5%;
         }
-
+        
         @include breakpoint(md) {
-            font-size: 1.2rem;
+            font-size: 2rem;
+            width: 5.5%;
         }
 
         @include breakpoint(sm) {
@@ -188,11 +224,21 @@
             flex-direction: column;
             gap: 10%;
 
+            @include breakpoint(lg) {
+                left: 20%;
+            }
+
+            @include breakpoint(md) {
+                left: 20%;
+                width: 40%;
+            }
+
             &__title {
                 font-size: 4.5rem;
                 font-family: "Poppins-Regular";
                 line-height: 130%;
                 font-weight: bolder;
+                text-shadow: 2px 3px 6px rgba(0,0,0,0.4);
 
                 @include breakpoint(xl) {
                     font-size: 2.5rem;
@@ -203,11 +249,11 @@
                 }
 
                 @include breakpoint(lg) {
-                    font-size: 1.8rem;
+                    font-size: 3rem;
                 }
 
                 @include breakpoint(md) {
-                    font-size: 1.5rem;
+                    font-size: 3rem;
                 }
 
                 @include breakpoint(sm) {
@@ -235,11 +281,13 @@
                 }
 
                 @include breakpoint(lg) {
-                    font-size: 0.9rem;
+                    font-size: 1.3rem;
+                    line-height: 150%;
                 }
-
+                
                 @include breakpoint(md) {
-                    font-size: 0.7rem;
+                    font-size: 1.2rem;
+                    line-height: 150%;
                 }
 
                 @include breakpoint(sm) {
@@ -272,12 +320,12 @@
                 }
 
                 @include breakpoint(lg) {
-                    width: 28%;
-                    height: 18%;
+                    width: 50%;
+                    height: 15%;
                 }
 
                 @include breakpoint(md) {
-                    width: 26%;
+                    width: 50%;
                     height: 15%;
                 }
 
@@ -327,8 +375,8 @@
                     }
 
                     @include breakpoint(md) {
-                        font-size: 0.8rem;
-                        border-width: 1px;
+                        font-size: 1rem;
+                        border-width: 1.5px;
                     }
 
                     @include breakpoint(sm) {
@@ -348,7 +396,8 @@
 
                     &:hover {
                         scale: 1.05;
-                        background: #00ffff83;
+                        background: #00b3ff;
+                        border-color: #420088;
                     }
                 }
             }
@@ -400,79 +449,79 @@
     @include breakpoint(xxs) {
         height: 130vh;
     }
-
+    
     &__title {
         text-align: center;
         font-size: 2rem;
         word-spacing: 10px;
         color: #1565C0;
         font-family: "Poppins-Regular";
-
+        
         @include breakpoint(xl) {
             font-size: 1.5rem;
         }
-
+        
         @include breakpoint(pxl) {
             font-size: 1.3rem;
         }
-
+        
         @include breakpoint(lg) {
             font-size: 1rem;
         }
-
+        
         @include breakpoint(md) {
             font-size: 1rem;
         }
-
+        
         @include breakpoint(sm) {
             font-size: 0.8rem;
         }
-
+        
         @include breakpoint(xs) {
             font-size: 0.7rem;
         }
-
+        
         @include breakpoint(xxs) {
             font-size: 0.6rem;
         }
     }
-
+    
     &__description {
         width: 40%;
         text-align: center;
         line-height: 1.6;
         font-size: 1.1rem;
-
+        
         @include breakpoint(xl) {
             font-size: 0.9rem;
         }
-
+        
         @include breakpoint(pxl) {
             font-size: 0.8rem;
         }
-
+        
         @include breakpoint(lg) {
             width: 45%;
             font-size: 0.7rem;
         }
-
+        
         @include breakpoint(md) {
             font-size: 0.45rem;
         }
-
+        
         @include breakpoint(sm) {
             font-size: 0.4rem;
         }
-
+        
         @include breakpoint(xs) {
             font-size: 0.4rem;
         }
-
+        
         @include breakpoint(xxs) {
             font-size: 0.3rem;
         }
     }
-
+    
     &__list {
         margin-top: 3%;
         width: 100%;
@@ -480,53 +529,53 @@
         display: flex;
         gap: 2%;
         justify-content: center;
-
+        
         @include breakpoint(md) {
             @include responsive-home-expectations;
         }
-
+        
         @include breakpoint(sm) {
             @include responsive-home-expectations;
         }
-
+        
         @include breakpoint(xs) {
             @include responsive-home-expectations {
                 row-gap: 20%
             }
         }
-
+        
         @include breakpoint(xxs) {
             @include responsive-home-expectations {
                 row-gap: 10%
             }
         }
-
+        
         &__item {
             width: 18%;
             height: 100%;
             display: flex;
             flex-direction: column;
             gap: 5%;
-
+            
             @include breakpoint(md) {
                 @include responsive-home-expectations-item;
             }
-
+            
             @include breakpoint(sm) {
                 @include responsive-home-expectations-item;
-
+                
             }
-
+            
             @include breakpoint(xs) {
                 @include responsive-home-expectations-item;
-
+                
             }
-
+            
             @include breakpoint(xxs) {
                 @include responsive-home-expectations-item;
             }
-
-
+            
+            
             &__card {
                 width: 100%;
                 height: 100%;
@@ -538,23 +587,23 @@
                 position: relative;
                 overflow: hidden;
                 z-index: 2;
-
+                
                 @include breakpoint(md) {
                     @include responsive-home-expectations-card;
                 }
-
+                
                 @include breakpoint(sm) {
                     @include responsive-home-expectations-card;
                 }
-
+                
                 @include breakpoint(xs) {
                     @include responsive-home-expectations-card;
                 }
-
+                
                 @include breakpoint(xxs) {
                     @include responsive-home-expectations-card;
                 }
-
+                
                 &__title {
                     padding: 1%;
                     border-radius: 10px;
@@ -565,6 +614,7 @@
                     position: absolute;
                     z-index: 3;
                     transition: 0.3s ease;
+                    text-shadow: 2px 3px 6px rgba(0,0,0,0.4);
 
                     @include breakpoint(xl) {
                         font-size: 1.7rem;
@@ -601,7 +651,7 @@
                     }
 
                     & .expectations__list__item__card__title {
-                        color: #1E88E5;
+                        color: #1e92e5;
 
                     }
                 }
@@ -1428,7 +1478,7 @@
         font-size: 2rem;
         text-align: center;
 
-        @include breakpoint(pxl){
+        @include breakpoint(pxl) {
             font-size: 1.7rem;
         }
     }
@@ -1443,6 +1493,7 @@
         @include breakpoint(xl) {
             height: 30%;
         }
+
         @include breakpoint(pxl) {
             height: 30%;
         }
