@@ -16,7 +16,7 @@ let headerHeight = 0;
 // Take the navigation menu out of the header
 
 const moveNavForMobile = () => {
-    if (window.innerWidth < 576) {
+    if (window.innerWidth < 768) {
         document.body.appendChild(menu);
     } else {
         header.insertBefore(menu, originalNextSibling);

@@ -44,7 +44,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-left: 12%;
+        margin-left: 8%;
 
         @include breakpoint(lg) {
             width: 25%;
@@ -57,8 +57,8 @@
         }
 
         @include breakpoint(sm) {
-            width: 25%;
-            margin-left: 5%;
+            width: 26%;
+            margin-left: 3%;
         }
 
         @include breakpoint(xs) {
@@ -95,7 +95,7 @@
                 }
 
                 @include breakpoint(sm) {
-                    width: 80%;
+                    width: 100%;
                     height: 80%;
                 }
 
@@ -120,6 +120,10 @@
         transition: 0.3s ease;
         cursor: pointer;
 
+        @include breakpoint(sm) {
+            @include mobile-burger();
+        }
+
         @include breakpoint(xs) {
             @include mobile-burger();
         }
@@ -133,8 +137,12 @@
         width: 40%;
         height: 100%;
         display: flex;
-        margin-left: 5%;
+        margin-left: 3%;
         transition: 0.5s ease-in-out;
+
+        @include breakpoint(sm) {
+            @include mobile-menu();
+        }
 
         @include breakpoint(xs) {
             @include mobile-menu();
@@ -151,6 +159,11 @@
             color: #ffffff;
             display: none;
 
+            @include breakpoint(sm) {
+                display: block;
+                font-size: 1.5rem;
+            }
+
             @include breakpoint(xs) {
                 display: block;
                 font-size: 1.5rem;
@@ -163,6 +176,12 @@
         }
 
         &.visible {
+            @include breakpoint(sm) {
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(0%);
+            }
+
             @include breakpoint(xs) {
                 opacity: 1;
                 visibility: visible;
@@ -189,11 +208,13 @@
             }
 
             @include breakpoint(md) {
-                gap: 11%;
+                gap: 12%;
             }
 
             @include breakpoint(sm) {
-                gap: 12%;
+                flex-direction: column;
+                height: 80%;
+                gap: 7%;
             }
 
             @include breakpoint(xs) {
@@ -218,23 +239,23 @@
                 font-size: 1.2rem;
 
                 @include breakpoint(xl) {
-                    font-size: 0.7rem;
+                    font-size: 0.9rem;
                 }
 
                 @include breakpoint(pxl) {
-                    font-size: 0.7rem;
-                }
-
-                @include breakpoint(lg) {
                     font-size: 0.8rem;
                 }
 
+                @include breakpoint(lg) {
+                    font-size: 1rem;
+                }
+
                 @include breakpoint(md) {
-                    font-size: 0.7rem;
+                    font-size: 0.8rem;
                 }
 
                 @include breakpoint(sm) {
-                    font-size: 0.6rem;
+                    font-size: 1rem;
                 }
 
                 @include breakpoint(xs) {
@@ -260,6 +281,30 @@
 
         &__assist-button {
             display: none;
+
+            @include breakpoint(sm) {
+
+                @include assist-button() {
+                    height: 4.5%;
+                    width: 65%;
+                    font-size: 0.75rem;
+                    white-space: nowrap;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    display: block;
+                }
+
+                & a {
+                    text-decoration: none;
+                    color: #ffffff;
+                    width: 100%;
+                }
+
+                &:hover {
+                    scale: 1.05;
+                }
+            }
 
             @include breakpoint(xs) {
 
@@ -328,17 +373,17 @@
         }
 
         @include breakpoint(md) {
-            width: 12%;
-            height: 45%;
+            width: 15%;
+            height: 50%;
             margin-left: 6%;
             border-width: 0.7px;
         }
 
         @include breakpoint(sm) {
-            width: 11%;
+            width: 23%;
             height: 50%;
             border-width: 0.7px;
-            margin-left: 7%;
+            margin-left: 17%;
         }
 
         @include breakpoint(xs) {
@@ -379,8 +424,8 @@
             }
 
             @include breakpoint(sm) {
-                font-size: 0.5rem;
-                line-height: 130%;
+                font-size: 0.9rem;
+                white-space: wrap;
             }
 
             @include breakpoint(xs) {

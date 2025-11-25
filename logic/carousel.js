@@ -91,6 +91,14 @@ const pauseAutoplay = () => {
 const resumeAutoplay = () => {
     autoplay = setInterval(() => autoChangeSlide(), 4000);
 };
+
+document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden') {
+        pauseAutoplay();
+    } else if (document.visibilityState === 'visible') {
+        resumeAutoplay();
+    }
+});
 buttonLeft.addEventListener('click', goPreviousSlide);
 buttonRight.addEventListener('click', goNextSlide);
 
@@ -99,6 +107,13 @@ buttonRight.addEventListener('mouseenter', pauseAutoplay);
 
 buttonLeft.addEventListener('mouseleave', resumeAutoplay);
 buttonRight.addEventListener('mouseleave', resumeAutoplay);
+
+function setVH () {
+    document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+}
+
+setVH();
+window.addEventListener('resize', setVH);
 
 document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'hidden') {
